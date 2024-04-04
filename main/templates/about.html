@@ -1,0 +1,50 @@
+{% extends "index.html" %}
+
+{% block content %}
+
+<div class="valign-wrapper">
+    <div class="container">
+        <div class="row">
+            <div class="col s12">
+                <a href="{% url 'main:about' %}" style="color: inherit; text-decoration: none;">
+                    <h4 class="left-align">About</h4>
+                </a>
+                <p>
+                    Introducing Blurry Detection - your go-to app for detecting blurry images in a flash!
+                    Tired of snapping pics only to find they're not as sharp as you hoped?
+                    Blurry Detection has you covered. Simply upload your image
+                    and get instant feedback on whether it's blurry or crystal clear.
+                    It's that easy! With BlurDetect, you'll never have to worry about fuzzy photos again.
+                </p>
+
+                <p class="grey-text center-align">
+                    <i>Say hello to sharp, high-quality images every time.</i>
+                </p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="valign-wrapper">
+    <div class="container">
+        <h5 class="center-align section">Dev Contact</h5>
+        <div class="row center-align">
+            <div class="col s12">
+                <a href="mailto:kadricze@gmail.com" class="btn-floating btn-large grey" title="Email">
+                    <i class="material-icons">email</i>
+                </a>
+                <a href="https://github.com/mehmedkadric" class="btn-floating btn-large grey" target="_blank"
+                    title="GitHub">
+                    <i class="fab fa-github"></i>
+                </a>
+                <a href="https://www.linkedin.com/in/mehmed-kadric-b31b1386/" class="btn-floating btn-large grey"
+                    target="_blank" title="LinkedIn">
+                    <i class="fab fa-linkedin-in"></i>
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+{% endblock %}

@@ -1,0 +1,52 @@
+{% extends 'index.html' %}
+{% load humanize %}
+
+{% block content %}
+<div class="valign-wrapper">
+    <div class="container center-align">
+        <div class="row">
+            <div class="col s12">
+                <h4 class="left-align">
+                    <a href="{% url 'main:profile' user.id %}" style="color: inherit; text-decoration: none;">
+                        User Info
+                    </a>
+                    <a href="{% url 'main:edit' user.id %}" title="Edit User">
+                        <i class="material-icons">edit</i>
+                    </a>
+                </h4>
+                <div class="col s12">
+                    <table class="responsive-table highlight">
+                        <tbody>
+                        <tr>
+                            <th class="blue-text"><i>First Name</i></th>
+                            <td>{{user.first_name}}</td>
+                        </tr>
+                        <tr>
+                            <th class="blue-text"><i>Last Name</i></th>
+                            <td>{{user.last_name}}</td>
+                        </tr>
+                        <tr>
+                            <th class="blue-text"><i>Username</i></th>
+                            <td>{{user.username}}</td>
+                        </tr>
+                        <tr>
+                            <th class="blue-text"><i>Email</i></th>
+                            <td>{{user.email}}</td>
+                        </tr>
+                        <tr>
+                            <th class="blue-text"><i>Last Login</i></th>
+                            <td>{{user.last_login | naturaltime}}</td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+        <p class="right-align blue-text">
+            <a href="{% url 'main:change_password' %}" style="color: inherit; text-decoration: none;">
+                Change Password?
+            </a>
+        </p>
+    </div>
+</div>
+{% endblock %}

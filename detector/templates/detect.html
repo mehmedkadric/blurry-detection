@@ -1,0 +1,18 @@
+{% extends "index.html" %}
+{% load static %}
+
+{% block content %}
+<div class="container">
+    <div class="row">
+        <div class="col s12">
+            <h4>
+                <a href="{% url 'detector:detect' %}" style="color: inherit; text-decoration: none;">
+                    Detect
+                </a>
+            </h4>
+        </div>
+    </div>
+</div>
+
+
+{% endblock %}
