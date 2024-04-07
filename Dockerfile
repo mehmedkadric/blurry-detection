@@ -15,9 +15,8 @@ RUN pip install --no-cache-dir -r requirements.txt
 # Copy the current directory contents into the container at /app
 COPY . /app/
 
-RUN python manage.py collectstatic --noinput && \
-    python manage.py makemigrations && \
-    python manage.py migrate
+# Collect static files
+RUN python manage.py collectstatic --noinput
 
 # Expose port 8000 to allow communication to/from server
 EXPOSE 8000
