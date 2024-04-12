@@ -1,0 +1,19 @@
+<form method="post" enctype="multipart/form-data">
+    {% csrf_token %}
+    <div class="file-field input-field">
+        <div class="btn blue">
+            <span>Choose File</span>
+            <input type="file" name="image">
+        </div>
+        <div class="file-path-wrapper">
+            <input class="file-path validate" type="text">
+        </div>
+    </div>
+    <div class="input-field">
+                <input id="threshold" type="number" name="threshold" class="validate" min="0" max="255">
+                <label for="threshold">Threshold</label>
+            </div>
+    <button class="btn waves-effect waves-light blue" type="submit">Upload</button>
+</form>
+
+
