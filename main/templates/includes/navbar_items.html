@@ -1,6 +1,6 @@
 <li><a href="{% url 'main:index' %}">Home</a></li>
 {% if user.is_authenticated %}
-<li><a href="{% url 'detector:detect' %}">Detect</a></li>
+<li><a href="{% url 'detector:upload_image' %}">Detect</a></li>
 <li><a href="{% url 'main:about' %}">About</a></li>
 <li><a href="{% url 'main:profile' user.id %}">{{ user.username }}</a></li>
 <li><a href="{% url 'main:logout' %}">Logout</a></li>
